@@ -4,7 +4,7 @@ const directoryPathName = path.join(__dirname, "../public");
 
 const axios = require("axios");
 const app = express();
-
+const port = process.env.PORT || 3000;
 //Static assets
 app.use(express.static(directoryPathName));
 
@@ -74,6 +74,6 @@ app.get("*", (req, res) => {
 });
 
 //Declaring Server
-app.listen(3000, () => {
-  console.log("Server up on running port 3000");
+app.listen(port, () => {
+  console.log("Server up on running port" + port);
 });

@@ -15,9 +15,7 @@ formField.addEventListener("submit", async (e) => {
     if (!location) {
       firstParagraph.textContent = "Please provide a location";
     }
-    const response = await fetch(
-      `http://localhost:3000/weather?address=${location}`
-    );
+    const response = await fetch(`weather?address=${location}`);
     const data = await response.json();
     firstParagraph.textContent = data.location;
     secondParagraph.textContent = data.forecast;
