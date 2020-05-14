@@ -4,7 +4,7 @@ const directoryPathName = path.join(__dirname, "../public");
 
 const axios = require("axios");
 const app = express();
-console.log("Added");
+
 //Static assets
 app.use(express.static(directoryPathName));
 
